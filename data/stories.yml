@@ -2,29 +2,38 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: User greets the chatbot
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: User asks for code explanation
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: ask_code_explanation
+  - action: action_explain_code
 
-- story: sad path 2
+- story: User seeks help with a Python error
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: ask_error_assistance
+  - action: action_provide_error_assistance
+
+- story: User wants clarification on a concept
+  steps:
+  - intent: ask_concept_clarification
+  - action: action_explain_concept
+
+- story: User requests code examples
+  steps:
+  - intent: ask_code_examples
+  - action: action_provide_code_examples
+
+- story: User ends the conversation
+  steps:
+  - intent: goodbye
   - action: utter_goodbye
+
+- story: User asks for help with updating
+  steps:
+  - intent: ask_how_to_update
+  - action: action_provide_updating_steps
+
