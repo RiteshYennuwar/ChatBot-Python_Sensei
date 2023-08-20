@@ -11,3 +11,33 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Respond to a greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Explain code when asked
+  steps:
+  - intent: ask_code_explanation
+  - action: action_explain_code
+
+- rule: Provide error assistance when asked
+  steps:
+  - intent: ask_error_assistance
+  - action: action_provide_error_assistance
+
+- rule: Clarify a concept when asked
+  steps:
+  - intent: ask_concept_clarification
+  - action: action_explain_concept
+
+- rule: Provide code examples when asked
+  steps:
+  - intent: ask_code_examples
+  - action: action_provide_code_examples
+
+- rule: Provide the steps for updating when asked
+  steps:
+  - intent: ask_how_to_update
+  - action: action_provide_updating_steps
