@@ -16,7 +16,7 @@ nlu:
       - goodevening
       - good afternoon
       - hello motherfucker
-      - hello sita
+      - hello ram
   - intent: goodbye
     examples: |
       - cu
