@@ -17,6 +17,7 @@ nlu:
       - good afternoon
       - hello motherfucker
       - hello Ritesh
+      - hello Jaswanth
   - intent: goodbye
     examples: |
       - cu
