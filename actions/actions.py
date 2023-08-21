@@ -40,5 +40,34 @@ class ActionHelloWorld(Action):
      
         
         return []
+
+
+
+    def name(self) -> Text:
+        return "action_provide_code_examples"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        code_type = tracker.get_slot("code_type")  
+        
+        
+        code_examples = {
+            "dictionaries": "my_dict = {'key': 'value'}",
+            "for loop": "for item in my_list:\n    print(item)",
+            "while loop": "while condition:\n    # do something",
+            "if else": "if condition:\n    # do something\nelse:\n    # do something else",
+            "tuple": "my_tuple = (1, 2, 3)",
+            "list": "my_list = [1, 2, 3]",
+        }
+
+        if code_type in code_examples:
+            example_code = code_examples[code_type]
+            response = f"Sure! Here's an example of {code_type} in Python:\n\n{example_code}"
+        else:
+            response = "I'm sorry, I don't have an example for that code type."
+
+        dispatcher.utter_message(text=response)
+        return []
+
+   
    
 
