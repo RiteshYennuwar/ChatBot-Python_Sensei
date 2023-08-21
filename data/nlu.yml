@@ -1,117 +1,119 @@
 version: "3.1"
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - hello motherfucker
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - see you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - i am done
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-    - yup
-    - ya
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-    - naa
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    - who the fuck are you?
-- intent: ask_error_assistance
-  examples: |
-    - I'm getting an error 'IndexError: list index out of range'
-    - Help, I encountered an error: 'NameError: name 'variable' is not defined'
-    - My code is giving me 'SyntaxError: invalid syntax'
-- intent: ask_concept_clarification
-  examples: |
-    - Can you explain what a 'for' loop is?
-    - What is object-oriented programming?
-    - Define a tuple in Python
-    - Clarify the concept of indentation
-- intent: ask_code_examples
-  examples: |
-    - Show me examples of working with dictionaries
-    - Provide some code samples for file handling
-    - Can you give me examples of using functions?
-    - Code examples for loops in Python
-- intent: ask_code_explanation
-  examples: |
-    - Explain this code: print("Hello, world!")
-    - Can you help me understand this code snippet? print(2 + 3)
-    - help me with this code
-    - What does print("Python") do?
-    - Break down print("Hello, IA!")
-- intent: ask_how_to_update
-  examples: |
-    - How to update pip?
-    - How to update python?
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - hello motherfucker
+      - hello Ritesh
+      - hello Jaswanth
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - see you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - i am done
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - yup
+      - ya
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - naa
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - who the fuck are you?
+  - intent: ask_error_assistance
+    examples: |
+      - I'm getting an error 'IndexError: list index out of range'
+      - Help, I encountered an error: 'NameError: name 'variable' is not defined'
+      - My code is giving me 'SyntaxError: invalid syntax'
+  - intent: ask_concept_clarification
+    examples: |
+      - Can you explain what a 'for' loop is?
+      - What is object-oriented programming?
+      - Define a tuple in Python
+      - Clarify the concept of indentation
+  - intent: ask_code_examples
+    examples: |
+      - Show me examples of working with dictionaries
+      - Provide some code samples for file handling
+      - Can you give me examples of using functions?
+      - Code examples for loops in Python
+  - intent: ask_code_explanation
+    examples: |
+      - Explain this code: print("Hello, world!")
+      - Can you help me understand this code snippet? print(2 + 3)
+      - help me with this code
+      - What does print("Python") do?
+      - Break down print("Hello, IA!")
+  - intent: ask_how_to_update
+    examples: |
+      - How to update pip?
+      - How to update python?
