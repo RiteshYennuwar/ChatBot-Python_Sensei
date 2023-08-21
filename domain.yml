@@ -28,7 +28,7 @@ responses:
   utter_ask_code_examples:
   - text: Sure! What topic or concept would you like to see code examples for?
   utter_ask_how_to_update:
-  - text: Here are the steps to update
+  - text: This link provides the steps to update python or pip
 actions:
 - utter_greet
 - action_explain_code
