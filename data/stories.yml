@@ -37,3 +37,13 @@ stories:
   - intent: ask_how_to_update
   - action: action_provide_updating_steps
 
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_code_examples
+    entities:
+    - code_type: list
+  - action: action_provide_code_examples
