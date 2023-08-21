@@ -17,10 +17,11 @@ entites:
 slots:
   code_type:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: code_type
+      intent: ask_code_examples
 responses:
   utter_greet:
   - text: Hey! I am a cahtbot created by IA team to help you with python programming.
