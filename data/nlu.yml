@@ -116,6 +116,7 @@ nlu:
     - [list](code_type)
     - I want example for [list](code_type)
     - give me example for [list](code_type)
+    - can you give code example for [while](code_type)
 - intent: ask_code_explanation
   examples: |
     - Explain this code: print("Hello, world!")

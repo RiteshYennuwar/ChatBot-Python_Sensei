@@ -42,11 +42,11 @@ responses:
 actions:
 - action_provide_code_examples
 - utter_greet
+- utter_goodbye
 - action_explain_code
 - action_provide_error_assistance
 - action_explain_concept
 - action_provide_updating_steps
-- utter_goodbye
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

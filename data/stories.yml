@@ -47,3 +47,16 @@ stories:
     entities:
     - code_type: list
   - action: action_provide_code_examples
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_code_examples
+    entities:
+    - code_type: while
+  - slot_was_set:
+    - code_type: while
+  - action: action_provide_code_examples
+  - intent: goodbye
+  - action: utter_goodbye
