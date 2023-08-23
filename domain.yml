@@ -1,47 +1,47 @@
-version: "3.1"
+version: '3.1'
 intents:
-  - affirm
-  - ask_code_examples
-  - ask_code_explanation
-  - ask_concept_clarification
-  - ask_error_assistance
-  - ask_how_to_update
-  - bot_challenge
-  - deny
-  - goodbye
-  - greet
-  - mood_great
-  - mood_unhappy
-  - Love
+- Love
+- affirm
+- ask_code_examples
+- ask_code_explanation
+- ask_concept_clarification
+- ask_error_assistance
+- ask_how_to_update
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
 entities:
-  - code_type
+- code_type
 slots:
-  name:
+  code_type:
     type: text
-    influence_conversation: true
+    influence_conversation: false
     mappings:
     - type: from_entity
       entity: code_type
       intent: ask_code_examples
 responses:
   utter_greet:
-    - text: Hey! I am a cahtbot created by IA team to help you with python programming.
+  - text: Hey! I am a cahtbot created by IA team to help you with python programming.
   utter_goodbye:
-    - text: Bye
+  - text: Bye
   utter_iamabot:
-    - text: I am a bot, powered by IA team.
+  - text: I am a bot, powered by IA team.
   utter_ask_code_explanation:
-    - text: Sure! Please provide me with the code snippet you'd like me to explain.
+  - text: Sure! Please provide me with the code snippet you'd like me to explain.
   utter_ask_error_assistance:
-    - text: Of course! Please describe the error message you're encountering or provide the relevant code snippet.
+  - text: Of course! Please describe the error message you're encountering or provide the relevant code snippet.
   utter_ask_concept_clarification:
-    - text: Certainly! What concept would you like me to clarify for you?
+  - text: Certainly! What concept would you like me to clarify for you?
   utter_ask_code_examples:
-    - text: Sure! What topic or concept would you like to see code examples for?
+  - text: Sure! What topic or concept would you like to see code examples for?
   utter_ask_how_to_update:
-    - text: This link provides the steps to update python or pip
+  - text: This link provides the steps to update python or pip
   action_Love:
-    - text: I love you chinnu
+  - text: I love you chinnu
 actions:
 - action_provide_code_examples
 - utter_greet

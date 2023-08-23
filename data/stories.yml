@@ -70,3 +70,66 @@ stories:
   - slot_was_set:
     - code_type: for loop
   - action: action_provide_code_examples
+
+- story: interactive_story_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_code_examples
+    entities:
+    - code_type: dictonary
+  - slot_was_set:
+    - code_type: dictonary
+  - action: action_provide_code_examples
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_code_examples
+    entities:
+    - code_type: list
+  - slot_was_set:
+    - code_type: list
+  - action: action_provide_code_examples
+  - intent: ask_code_examples
+    entities:
+    - code_type: while loop
+  - slot_was_set:
+    - code_type: while loop
+  - action: action_provide_code_examples
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_code_examples
+    entities:
+    - code_type: while loop
+  - slot_was_set:
+    - code_type: while loop
+  - action: action_provide_code_examples
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_code_examples
+    entities:
+    - code_type: while loop
+  - slot_was_set:
+    - code_type: while loop
+  - action: action_provide_code_examples
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_code_examples
+    entities:
+    - code_type: tuple
+  - slot_was_set:
+    - code_type: tuple
+  - action: action_provide_code_examples

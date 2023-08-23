@@ -19,6 +19,7 @@ nlu:
     - hello Ritesh
     - hello Jaswanth
     - hai
+    - motherfucker
 - intent: goodbye
   examples: |
     - cu
@@ -31,6 +32,7 @@ nlu:
     - see you around
     - bye bye
     - i am done
+    - see you
 - intent: affirm
   examples: |
     - yes
@@ -118,6 +120,13 @@ nlu:
     - give me example for [list](code_type)
     - can you give code example for [while](code_type)
     - give me code example of [for loop](code_type)
+    - provide me with examples of [dictonary](code_type)
+    - i want an example of [for loop](code_type)
+    - i want an examples for [list](code_type) in python
+    - example of [while loop](code_type)
+    - examples of [while loop](code_type)
+    - give me example of [while loop](code_type)
+    - example of [tuple](code_type)
 - intent: ask_code_explanation
   examples: |
     - Explain this code: print("Hello, world!")

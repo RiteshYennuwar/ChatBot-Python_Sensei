@@ -8,23 +8,26 @@ class ActionProvideCodeExamples(Action):
         return "action_provide_code_examples"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Replace this with your code logic to provide code examples
-        try:
-            # Get the user's query from the tracker
-            user_query = tracker.latest_message.get('text')
+        
+        user_query = tracker.latest_message.get('code_type')
+        code_examples = {
+            "dictionaries": "my_dict = {'key': 'value'}",
+            "for loop": "for item in my_list:\n    print(item)",
+            "while loop": "while condition:\n    # do something",
+            "if else": "if condition:\n    # do something\nelse:\n    # do something else",
+            "tuple": "my_tuple = (1, 2, 3)",
+            "list": "my_list = [1, 2, 3]",
+        }
 
-            # Perform Google search
-            search_results = list(search(user_query, num=1, stop=1, pause=2))  # Fetch the first result
+        for i in code_examples:
+            if (i == user_query):
+                dispatcher.utter_message(code_examples[i])
 
-            if search_results:
-                first_result_url = search_results[0]
-                # Send the response back to the user
-                dispatcher.utter_message(text=f"I found a relevant result: {first_result_url}")
+        
             else:
-                dispatcher.utter_message(text="I couldn't find any relevant search results.")
-
-        except Exception as e:
-            dispatcher.utter_message(text="An error occurred while searching.")
+                dispatcher.utter_message(i)
+                dispatcher.utter_message("fuck off!")
+        dispatcher.utter_message(user_query)
 
         return []
 
