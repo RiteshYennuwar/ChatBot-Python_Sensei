@@ -18,7 +18,6 @@ class ActionProvideCodeExamples(Action):
 
             if search_results:
                 first_result_url = search_results[0]
-
                 # Send the response back to the user
                 dispatcher.utter_message(text=f"I found a relevant result: {first_result_url}")
             else:
@@ -74,4 +73,3 @@ class ActionUtterGoodbye(Action):
         return []
 
 # Add more actions as needed for other parts of your domain
-
