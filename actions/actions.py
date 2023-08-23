@@ -9,7 +9,7 @@ class ActionProvideCodeExamples(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        user_query = tracker.latest_message.get('code_type')
+        user_query = next(tracker.get_latest_entity_values('code_type'),None)
         code_examples = {
             "dictionaries": "my_dict = {'key': 'value'}",
             "for loop": "for item in my_list:\n    print(item)",
@@ -19,15 +19,21 @@ class ActionProvideCodeExamples(Action):
             "list": "my_list = [1, 2, 3]",
         }
 
-        for i in code_examples:
-            if (i == user_query):
-                dispatcher.utter_message(code_examples[i])
+        tz_string = code_examples.get(user_query, None)
+        dispatcher.utter_message(tz_string)
+        if not tz_string:
+            msg = f"is {user_query} spelled correctly?"
+            dispatcher.utter_message(text=msg)
+
+        # for i in code_examples:
+        #     if (i == user_query):
+        #         dispatcher.utter_message(code_examples[i])
 
         
-            else:
-                dispatcher.utter_message(i)
-                dispatcher.utter_message("fuck off!")
-        dispatcher.utter_message(user_query)
+        #     else:
+        #         dispatcher.utter_message(i)
+        #         dispatcher.utter_message("fuck off!")
+        # dispatcher.utter_message(user_query)
 
         return []
 
