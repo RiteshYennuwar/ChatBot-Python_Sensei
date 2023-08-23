@@ -39,7 +39,7 @@ stories:
 
 
 
-- story: interactive_story_1
+- story: interactive_story_0
   steps:
   - intent: greet
   - action: utter_greet
@@ -48,7 +48,7 @@ stories:
     - code_type: list
   - action: action_provide_code_examples
 
-- story: interactive_story_1
+- story: interactive_story_2
   steps:
   - intent: greet
   - action: utter_greet
@@ -60,3 +60,14 @@ stories:
   - action: action_provide_code_examples
   - intent: goodbye
   - action: utter_goodbye
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_code_examples
+    entities:
+    - code_type: for loop
+  - slot_was_set:
+    - code_type: for loop
+  - action: action_provide_code_examples
