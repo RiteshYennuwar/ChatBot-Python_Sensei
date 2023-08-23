@@ -13,15 +13,16 @@ intents:
   - mood_great
   - mood_unhappy
   - Love
-
+entities:
+  - code_type
 slots:
   name:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
-      - type: from_entity_name
-        entity: name
-        intent: Love
+    - type: from_entity
+      entity: code_type
+      intent: ask_code_examples
 responses:
   utter_greet:
     - text: Hey! I am a cahtbot created by IA team to help you with python programming.
@@ -42,16 +43,13 @@ responses:
   action_Love:
     - text: I love you chinnu
 actions:
-  - action_Love
-  - action_provide_code_examples
-  - utter_greet
-  - action_explain_code
-  - action_provide_error_assistance
-  - action_explain_concept
-  - action_provide_updating_steps
-  - utter_goodbye
+- action_provide_code_examples
+- utter_greet
+- utter_goodbye
+- action_explain_code
+- action_provide_error_assistance
+- action_explain_concept
+- action_provide_updating_steps
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-entities:
-  - name
