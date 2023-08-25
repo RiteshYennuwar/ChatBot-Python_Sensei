@@ -1,6 +1,5 @@
 version: '3.1'
 intents:
-- Love
 - affirm
 - ask_code_examples
 - ask_code_explanation
@@ -13,7 +12,9 @@ intents:
 - greet
 - mood_great
 - mood_unhappy
+- randon_user_typing
 entities:
+- update_type
 - code_type
 slots:
   code_type:
@@ -23,6 +24,13 @@ slots:
     - type: from_entity
       entity: code_type
       intent: ask_code_examples
+  update_type:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: update_type
+      intent: ask_how_to_update
 responses:
   utter_greet:
   - text: Hey! I am a cahtbot created by IA team to help you with python programming.
@@ -40,14 +48,17 @@ responses:
   - text: Sure! What topic or concept would you like to see code examples for?
   utter_ask_how_to_update:
   - text: This link provides the steps to update python or pip
+  utter_random_user_typing:
+  - text: It looks like your message consists of a random sequence of characters. If you have any questions or if there's something specific you'd like to discuss or ask about pyhton programming, feel free to let me know, and I'll be happy to assist you!
 actions:
-- action_provide_code_examples
 - utter_greet
+- action_provide_updating_steps
+- utter_iamabot
 - utter_goodbye
+- action_provide_code_examples
+- action_explain_concept
 - action_explain_code
 - action_provide_error_assistance
-- action_explain_concept
-- action_provide_updating_steps
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

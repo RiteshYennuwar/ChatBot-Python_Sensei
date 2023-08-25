@@ -103,7 +103,7 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: interactive_story_1
+- story: interactive_story_6
   steps:
   - intent: greet
   - action: utter_greet
@@ -116,7 +116,7 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: interactive_story_1
+- story: interactive_story_7
   steps:
   - intent: ask_code_examples
     entities:
@@ -125,7 +125,7 @@ stories:
     - code_type: while loop
   - action: action_provide_code_examples
 
-- story: interactive_story_1
+- story: interactive_story_8
   steps:
   - intent: ask_code_examples
     entities:
@@ -133,3 +133,40 @@ stories:
   - slot_was_set:
     - code_type: tuple
   - action: action_provide_code_examples
+
+- story: interactive_story_9
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_concept_clarification
+  - action: action_explain_concept
+  - intent: ask_concept_clarification
+  - action: action_explain_concept
+  - intent: ask_concept_clarification
+  - action: action_explain_concept
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: ask_code_examples
+    entities:
+    - code_type: tuple
+  - slot_was_set:
+    - code_type: tuple
+  - action: action_provide_code_examples
+  - intent: affirm
+  - intent: ask_how_to_update
+    entities:
+    - update_type: pip
+  - slot_was_set:
+    - update_type: pip
+  - action: action_provide_updating_steps
+  - intent: goodbye
+  - action: utter_goodbye

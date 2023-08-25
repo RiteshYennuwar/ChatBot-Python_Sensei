@@ -20,6 +20,7 @@ nlu:
     - hello Jaswanth
     - hai
     - motherfucker
+    - hi bro
 - intent: goodbye
   examples: |
     - cu
@@ -33,6 +34,7 @@ nlu:
     - bye bye
     - i am done
     - see you
+    - see ya
 - intent: affirm
   examples: |
     - yes
@@ -92,6 +94,8 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
     - who the fuck are you?
+    - are you a ai?
+    - who are you?
 - intent: ask_error_assistance
   examples: |
     - I'm getting an error 'IndexError: list index out of range'
@@ -127,6 +131,7 @@ nlu:
     - examples of [while loop](code_type)
     - give me example of [while loop](code_type)
     - example of [tuple](code_type)
+    - can you give me code examples of [tuple](code_type)
 - intent: ask_code_explanation
   examples: |
     - Explain this code: print("Hello, world!")
@@ -136,5 +141,23 @@ nlu:
     - Break down print("Hello, IA!")
 - intent: ask_how_to_update
   examples: |
-    - How to update pip?
-    - How to update python?
+    - How to update [pip](update_type)?
+    - How to update [python](update_type)?
+    - What's the recommended way to upgrade [pip](update_type) in Python?
+    - How can I update [pip](update_type) only for that environment?
+    - How do I update [pip](update_type) to the latest version?
+    - What's the easiest way to upgrade all my Python [packages](update_type) to their latest versions?
+    - I want to upgrade a specific Python [library](update_type) to the latest version. How can I do that?
+    - Is there a way to upgrade all [packages](update_type) in a virtual environment without affecting the global environment?
+    - I'm worried about breaking my existing code. How can I ensure that upgrading [packages](update_type) won't cause issues?
+    - Is it possible to upgrade multiple [packages](code_type) at once instead of one by one?
+    - how to update [pip](update_type)?
+- intent: ask_random_user_typing
+  examples: |
+    - gayrifbevih
+    - hfyeiyvbaio
+    - jiwjefnoapwx
+    - piqeifn
+    - qwertyuiop
+    - asdfghjkl
+    - zxcvbnm

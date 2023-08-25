@@ -40,7 +40,8 @@ rules:
     steps:
       - intent: ask_how_to_update
       - action: action_provide_updating_steps
-  - rule: User asks about love
+
+  - rule: ask to type correct sentenses
     steps:
-      - intent: Love
-      - action: action_Love
+      - intent: randon_user_typing
+      - action: utter_random_user_typing
