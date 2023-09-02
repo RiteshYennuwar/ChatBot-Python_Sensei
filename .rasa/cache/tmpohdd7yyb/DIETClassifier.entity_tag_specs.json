@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-code_type",
+      "2": "I-code_type",
+      "3": "L-code_type",
+      "4": "U-code_type",
+      "5": "B-error_type",
+      "6": "I-error_type",
+      "7": "L-error_type",
+      "8": "U-error_type",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-code_type": 1,
+      "I-code_type": 2,
+      "L-code_type": 3,
+      "U-code_type": 4,
+      "B-error_type": 5,
+      "I-error_type": 6,
+      "L-error_type": 7,
+      "U-error_type": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

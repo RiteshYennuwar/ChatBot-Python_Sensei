@@ -1,0 +1,18 @@
+{
+  "indexerror: list index out of range": "IndexError: list index out of range",
+  "nameerror: name 'variable' is not defined": "NameError: name 'variable' is not defined",
+  "syntaxerror: invalid syntax": "SyntaxError: invalid syntax",
+  "valueerror": "ValueError",
+  "nameerror": "NameError",
+  "dictionaries": "dictionaries",
+  "for loop": "for loop",
+  "while loop": "while loop",
+  "if else": "if else",
+  "tuple": "tuple",
+  "list": "list",
+  "while": "while",
+  "dictonary": "dictonary",
+  "for": "for",
+  "object-oriented programming": "object-oriented programming",
+  "indentation": "indentation"
+}
