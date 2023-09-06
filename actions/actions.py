@@ -113,7 +113,7 @@ class ActionProvideErrorAssistance(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # Replace this with your code logic to provide error assistance
 
-        query = tracker.latest_message.get("text")  # Get the user's query
+        query = next(tracker.get_latest_entity_values('error_type'),None)  # Get the user's query
         try:
             if query:
                 api_url = f"https://api.stackexchange.com/2.3/search?order=desc&sort=activity&tagged=python&intitle={query}&site=stackoverflow"
