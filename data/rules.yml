@@ -1,46 +1,473 @@
 version: "3.1"
 
 rules:
-  - rule: Say goodbye anytime the user says goodbye
-    steps:
-      - intent: goodbye
-      - action: utter_goodbye
+  # - rule: Say goodbye anytime the user says goodbye
+  #   steps:
+  #     - intent: goodbye
+  #     - action: utter_goodbye
 
   - rule: Say 'I am a bot' anytime the user challenges
     steps:
       - intent: bot_challenge
       - action: utter_iamabot
 
-  - rule: Respond to a greeting
-    steps:
-      - intent: greet
-      - action: utter_greet
+  # - rule: Respond to a greeting
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
 
-  - rule: Explain code when asked
-    steps:
-      - intent: ask_code_explanation
-      - action: action_explain_code
 
   - rule: Provide error assistance when asked
     steps:
       - intent: ask_error_assistance
+      - action: utter_ask_error_assistance
+
+  - rule: run error aciton
+    steps:
+      - intent: error_assistance
       - action: action_provide_error_assistance
 
   - rule: Clarify a concept when asked
     steps:
       - intent: ask_concept_clarification
+      - action: utter_ask_concept_clarification
+
+  - rule: run concept action
+    steps:
+      - intent: concept_clarification
       - action: action_explain_concept
 
-  - rule: Provide code examples when asked
-    steps:
-      - intent: ask_code_examples
-      - action: action_provide_code_examples
+  # - rule: User asks about love
+  #   steps:
+  #     - intent: Love
+  #     - action: action_Love
 
-  - rule: Provide the steps for updating when asked
+
+  # - rule: smalltalk_agent_acquaintance
+  #   steps:
+  #     - intent: smalltalk_agent_acquaintance
+  #     - action: utter_smalltalk_agent_acquaintance
+
+  - rule: smalltalk_agent_age
     steps:
-      - intent: ask_how_to_update
-      - action: action_provide_updating_steps
-  - rule: User asks about love
+      - intent: smalltalk_agent_age
+      - action: utter_smalltalk_agent_age
+
+  - rule: smalltalk_agent_annoying
     steps:
-      - intent: Love
-      - action: action_Love
+      - intent: smalltalk_agent_annoying
+      - action: utter_smalltalk_agent_annoying
+
+  - rule: smalltalk_agent_answer_my_question
+    steps:
+      - intent: smalltalk_agent_answer_my_question
+      - action: utter_smalltalk_agent_answer_my_question
+
+  - rule: smalltalk_agent_bad
+    steps:
+      - intent: smalltalk_agent_bad
+      - action: utter_smalltalk_agent_bad
+
+  - rule: smalltalk_agent_be_clever
+    steps:
+      - intent: smalltalk_agent_be_clever
+      - action: utter_smalltalk_agent_be_clever
+
+  - rule: smalltalk_agent_beautiful
+    steps:
+      - intent: smalltalk_agent_beautiful
+      - action: utter_smalltalk_agent_beautiful
+
+  - rule: smalltalk_agent_birth_date
+    steps:
+      - intent: smalltalk_agent_birth_date
+      - action: utter_smalltalk_agent_birth_date
+
+  - rule: smalltalk_agent_boring
+    steps:
+      - intent: smalltalk_agent_boring
+      - action: utter_smalltalk_agent_boring
+
+  - rule: smalltalk_agent_boss
+    steps:
+      - intent: smalltalk_agent_boss
+      - action: utter_smalltalk_agent_boss
+
+  - rule: smalltalk_agent_busy
+    steps:
+      - intent: smalltalk_agent_busy
+      - action: utter_smalltalk_agent_busy
+
+  # - rule: smalltalk_agent_chatbot
+  #     steps:
+  #     - intent: smalltalk_agent_chatbot
+  #     - action: utter_smalltalk_agent_chatbot
+
+  - rule: smalltalk_agent_clever
+    steps:
+      - intent: smalltalk_agent_clever
+      - action: utter_smalltalk_agent_clever
+
+  - rule: smalltalk_agent_crazy
+    steps:
+      - intent: smalltalk_agent_crazy
+      - action: utter_smalltalk_agent_crazy
+
+  - rule: smalltalk_agent_fired
+    steps:
+      - intent: smalltalk_agent_fired
+      - action: utter_smalltalk_agent_fired
+
+  - rule: smalltalk_agent_funny
+    steps:
+      - intent: smalltalk_agent_funny
+      - action: utter_smalltalk_agent_funny
+
+  - rule: smalltalk_agent_good
+    steps:
+      - intent: smalltalk_agent_good
+      - action: utter_smalltalk_agent_good
+
+  - rule: smalltalk_agent_happy
+    steps:
+      - intent: smalltalk_agent_happy
+      - action: utter_smalltalk_agent_happy
+
+  - rule: smalltalk_agent_hungry
+    steps:
+      - intent: smalltalk_agent_hungry
+      - action: utter_smalltalk_agent_hungry
+
+  - rule: smalltalk_agent_marry_user
+    steps:
+      - intent: smalltalk_agent_marry_user
+      - action: utter_smalltalk_agent_marry_user
+
+  - rule: smalltalk_agent_my_friend
+    steps:
+      - intent: smalltalk_agent_my_friend
+      - action: utter_smalltalk_agent_my_friend
+
+  - rule: smalltalk_agent_occupation
+    steps:
+      - intent: smalltalk_agent_occupation
+      - action: utter_smalltalk_agent_occupation
+
+  - rule: smalltalk_agent_origin
+    steps:
+      - intent: smalltalk_agent_origin
+      - action: utter_smalltalk_agent_origin
+
+  - rule: smalltalk_agent_ready
+    steps:
+      - intent: smalltalk_agent_ready
+      - action: utter_smalltalk_agent_ready
+
+  # - rule: smalltalk_agent_real
+  #   steps:
+  #     - intent: smalltalk_agent_real
+  #     - action: utter_smalltalk_agent_real
+
+  # - rule: smalltalk_agent_residence
+  #   steps:
+  #     - intent: smalltalk_agent_residence
+  #     - action: utter_smalltalk_agent_residence
+
+  - rule: smalltalk_agent_right
+    steps:
+      - intent: smalltalk_agent_right
+      - action: utter_smalltalk_agent_right
+
+  - rule: smalltalk_confirmation_yes
+    steps:
+      - intent: smalltalk_confirmation_yes
+      - action: utter_smalltalk_confirmation_yes
+
+  - rule: smalltalk_agent_sure
+    steps:
+      - intent: smalltalk_agent_sure
+      - action: utter_smalltalk_agent_sure
+
+  - rule: smalltalk_agent_talk_to_me
+    steps:
+      - intent: smalltalk_agent_talk_to_me
+      - action: utter_smalltalk_agent_talk_to_me
+
+  - rule: smalltalk_agent_there
+    steps:
+      - intent: smalltalk_agent_there
+      - action: utter_smalltalk_agent_there
+
+  - rule: smalltalk_appraisal_bad
+    steps:
+      - intent: smalltalk_appraisal_bad
+      - action: utter_smalltalk_appraisal_bad
+
+  - rule: smalltalk_appraisal_good
+    steps:
+      - intent: smalltalk_appraisal_good
+      - action: utter_smalltalk_appraisal_good
+
+  - rule: smalltalk_appraisal_no_problem
+    steps:
+      - intent: smalltalk_appraisal_no_problem
+      - action: utter_smalltalk_appraisal_no_problem
+
+  - rule: smalltalk_appraisal_thank_you
+    steps:
+      - intent: smalltalk_appraisal_thank_you
+      - action: utter_smalltalk_appraisal_thank_you
+
+  - rule: smalltalk_appraisal_welcome
+    steps:
+      - intent: smalltalk_appraisal_welcome
+      - action: utter_smalltalk_appraisal_welcome
+
+  - rule: smalltalk_appraisal_well_done
+    steps:
+      - intent: smalltalk_appraisal_well_done
+      - action: utter_smalltalk_appraisal_well_done
+
+  - rule: smalltalk_confirmation_cancel
+    steps:
+      - intent: smalltalk_confirmation_cancel
+      - action: utter_smalltalk_confirmation_cancel
+
+  - rule: smalltalk_confirmation_no
+    steps:
+      - intent: smalltalk_confirmation_no
+      - action: utter_smalltalk_confirmation_no
+
+  - rule: smalltalk_dialog_hold_on
+    steps:
+      - intent: smalltalk_dialog_hold_on
+      - action: utter_smalltalk_dialog_hold_on
+
+  - rule: smalltalk_dialog_hug
+    steps:
+      - intent: smalltalk_dialog_hug
+      - action: utter_smalltalk_dialog_hug
+
+  - rule: smalltalk_dialog_i_do_not_care
+    steps:
+      - intent: smalltalk_dialog_i_do_not_care
+      - action: utter_smalltalk_dialog_i_do_not_care
+
+  - rule: smalltalk_dialog_sorry
+    steps:
+      - intent: smalltalk_dialog_sorry
+      - action: utter_smalltalk_dialog_sorry
+
+  - rule: smalltalk_dialog_what_do_you_mean
+    steps:
+      - intent: smalltalk_dialog_what_do_you_mean
+      - action: utter_smalltalk_dialog_what_do_you_mean
+
+  - rule: smalltalk_dialog_wrong
+    steps:
+      - intent: smalltalk_dialog_wrong
+      - action: utter_smalltalk_dialog_wrong
+
+  - rule: smalltalk_emotions_ha_ha
+    steps:
+      - intent: smalltalk_emotions_ha_ha
+      - action: utter_smalltalk_emotions_ha_ha
+
+  - rule: smalltalk_emotions_wow
+    steps:
+      - intent: smalltalk_emotions_wow
+      - action: utter_smalltalk_emotions_wow
+
+  - rule: smalltalk_greetings_bye
+    steps:
+      - intent: smalltalk_greetings_bye
+      - action: utter_smalltalk_greetings_bye
+
+  - rule: smalltalk_greetings_goodevening
+    steps:
+      - intent: smalltalk_greetings_goodevening
+      - action: utter_smalltalk_greetings_goodevening
+
+  - rule: smalltalk_greetings_goodmorning
+    steps:
+      - intent: smalltalk_greetings_goodmorning
+      - action: utter_smalltalk_greetings_goodmorning
+
+  - rule: smalltalk_greetings_goodnight
+    steps:
+      - intent: smalltalk_greetings_goodnight
+      - action: utter_smalltalk_greetings_goodnight
+
+  - rule: smalltalk_greetings_hello
+    steps:
+      - intent: smalltalk_greetings_hello
+      - action: utter_smalltalk_greetings_hello
+
+  - rule: smalltalk_greetings_how_are_you
+    steps:
+      - intent: smalltalk_greetings_how_are_you
+      - action: utter_smalltalk_greetings_how_are_you
+
+  - rule: smalltalk_greetings_nice_to_meet_you
+    steps:
+      - intent: smalltalk_greetings_nice_to_meet_you
+      - action: utter_smalltalk_greetings_nice_to_meet_you
+
+  - rule: smalltalk_greetings_nice_to_see_you
+    steps:
+      - intent: smalltalk_greetings_nice_to_see_you
+      - action: utter_smalltalk_greetings_nice_to_see_you
+
+  - rule: smalltalk_greetings_nice_to_talk_to_you
+    steps:
+      - intent: smalltalk_greetings_nice_to_talk_to_you
+      - action: utter_smalltalk_greetings_nice_to_talk_to_you
+
+  - rule: smalltalk_greetings_whatsup
+    steps:
+      - intent: smalltalk_greetings_whatsup
+      - action: utter_smalltalk_greetings_whatsup
+
+  - rule: smalltalk_user_angry
+    steps:
+      - intent: smalltalk_user_angry
+      - action: utter_smalltalk_user_angry
+
+  - rule: smalltalk_user_back
+    steps:
+      - intent: smalltalk_user_back
+      - action: utter_smalltalk_user_back
+
+  - rule: smalltalk_user_bored
+    steps:
+      - intent: smalltalk_user_bored
+      - action: utter_smalltalk_user_bored
+
+  - rule: smalltalk_user_busy
+    steps:
+      - intent: smalltalk_user_busy
+      - action: utter_smalltalk_user_busy
+
+  - rule: smalltalk_user_can_not_sleep
+    steps:
+      - intent: smalltalk_user_can_not_sleep
+      - action: utter_smalltalk_user_can_not_sleep
+
+  - rule: smalltalk_user_does_not_want_to_talk
+    steps:
+      - intent: smalltalk_user_does_not_want_to_talk
+      - action: utter_smalltalk_user_does_not_want_to_talk
+
+  - rule: smalltalk_user_excited
+    steps:
+      - intent: smalltalk_user_excited
+      - action: utter_smalltalk_user_excited
+
+  - rule: smalltalk_user_going_to_bed
+    steps:
+      - intent: smalltalk_user_going_to_bed
+      - action: utter_smalltalk_user_going_to_bed
+
+  - rule: smalltalk_user_good
+    steps:
+      - intent: smalltalk_user_good
+      - action: utter_smalltalk_user_good
+
+  - rule: smalltalk_user_happy
+    steps:
+      - intent: smalltalk_user_happy
+      - action: utter_smalltalk_user_happy
+
+  - rule: smalltalk_user_has_birthday
+    steps:
+      - intent: smalltalk_user_has_birthday
+      - action: utter_smalltalk_user_has_birthday
+
+  - rule: smalltalk_user_here
+    steps:
+      - intent: smalltalk_user_here
+      - action: utter_smalltalk_user_here
+
+  - rule: smalltalk_user_joking
+    steps:
+      - intent: smalltalk_user_joking
+      - action: utter_smalltalk_user_joking
+
+  - rule: smalltalk_user_likes_agent
+    steps:
+      - intent: smalltalk_user_likes_agent
+      - action: utter_smalltalk_user_likes_agent
+
+  - rule: smalltalk_user_lonely
+    steps:
+      - intent: smalltalk_user_lonely
+      - action: utter_smalltalk_user_lonely
+
+  - rule: smalltalk_user_looks_like
+    steps:
+      - intent: smalltalk_user_looks_like
+      - action: utter_smalltalk_user_looks_like
+
+  - rule: smalltalk_user_loves_agent
+    steps:
+      - intent: smalltalk_user_loves_agent
+      - action: utter_smalltalk_user_loves_agent
+
+  - rule: smalltalk_user_misses_agent
+    steps:
+      - intent: smalltalk_user_misses_agent
+      - action: utter_smalltalk_user_misses_agent
+
+  - rule: smalltalk_user_needs_advice
+    steps:
+      - intent: smalltalk_user_needs_advice
+      - action: utter_smalltalk_user_needs_advice
+
+  - rule: smalltalk_user_sad
+    steps:
+      - intent: smalltalk_user_sad
+      - action: utter_smalltalk_user_sad
+
+  - rule: smalltalk_user_sleepy
+    steps:
+      - intent: smalltalk_user_sleepy
+      - action: utter_smalltalk_user_sleepy
+
+  - rule: smalltalk_user_testing_agent
+    steps:
+      - intent: smalltalk_user_testing_agent
+      - action: utter_smalltalk_user_testing_agent
+
+  - rule: smalltalk_user_tired
+    steps:
+      - intent: smalltalk_user_tired
+      - action: utter_smalltalk_user_tired
+
+  - rule: smalltalk_user_waits
+    steps:
+      - intent: smalltalk_user_waits
+      - action: utter_smalltalk_user_waits
+
+  - rule: smalltalk_user_wants_to_see_agent_again
+    steps:
+      - intent: smalltalk_user_wants_to_see_agent_again
+      - action: utter_smalltalk_user_wants_to_see_agent_again
+
+  - rule: smalltalk_user_wants_to_talk
+    steps:
+      - intent: smalltalk_user_wants_to_talk
+      - action: utter_smalltalk_user_wants_to_talk
+
+  - rule: smalltalk_user_will_be_back
+    steps:
+      - intent: smalltalk_user_will_be_back
+      - action: utter_smalltalk_user_will_be_back
+
+  # - rule: inttuption in user_query_form
+  #   condition:
+  #   - active loop: user_query_form
+  #     steps:
+  #     - intent: bot_challenge
+  #     - action: utter_iamabot
+  #     - action: user_query_form
+  #     - active loop: user_query_form

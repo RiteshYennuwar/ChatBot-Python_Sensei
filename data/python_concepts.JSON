@@ -1,0 +1,96 @@
+[
+  {
+    "name":"python",
+    "description":"<code>Python is a high-level</code>, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.\n\nPython is Interpreted\n- Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP.\n\nPython is Interactive\n- You can actually sit at a Python prompt and interact with the interpreter directly to write your program.\n\nPython is Object-Oriented\n- Python supports Object-Oriented style or technique of programming that encapsulates code within objects.\n\nPython is a Beginner's Language\n- Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.",
+    "subconcepts":[
+      {
+        "name":"History of Python",
+        "description":"Python was developed by Guido van Rossum in the late eighties and early nineties at the National Research Institute for Mathematics and Computer Science in the Netherlands.\nPython is derived from many other languages, including ABC, Modula-3, C, C++, Algol-68, SmallTalk, and Unix shell and other scripting languages.\nPython is copyrighted. Like Perl, Python source code is now available under the GNU General Public License (GPL).\nPython is now maintained by a core development team at the institute, although Guido van Rossum still holds a vital role in directing its progress."
+      },
+      {
+        "name":"Python Features",
+        "description":"Python's features include -\n\nEasy-to-learn\n- Python has few keywords, simple structure, and a clearly defined syntax. This allows the student to pick up the language quickly.\n\nEasy-to-read\n- Python code is more clearly defined and visible to the eyes.\n\nEasy-to-maintain\n- Python's source code is fairly easy-to-maintain.\n\nA broad standard library\n- Python's bulk of the library is very portable and cross-platform compatible on UNIX, Windows, and Macintosh.\n\nInteractive Mode\n- Python has support for an interactive mode which allows interactive testing and debugging of snippets of code.\n\nPortable\n- Python can run on a wide variety of hardware platforms and has the same interface on all platforms.\n\nExtendable\n- You can add low-level modules to the Python interpreter. These modules enable programmers to add to or customize their tools to be more efficient.\n\nDatabases\n- Python provides interfaces to all major commercial databases.\n\nGUI Programming\n- Python supports GUI applications that can be created and ported to many system calls, libraries and windows systems, such as Windows MFC, Macintosh, and the X Window system of Unix.\n\nScalable\n- Python provides a better structure and support for large programs than shell scripting."
+      }
+    ]
+  },
+  {
+    "name": "Variables",
+    "alias":["var"],
+    "description": "Variables are used to store data values. They are created using the assignment operator (=).",
+    "examples":[
+      "age = 25",
+      "count = 0",
+      "name = 'Alice'",
+      "message = \"Hello, world!\"",
+      "coordinates = (10, 20)",
+      "person = ('Alice', 25)"],
+    "subconcepts": [
+      {
+        "name": "Int",
+        "alias":["integer"],
+        "description": "Integer variables store whole numbers, such as 5, -10, or 0.",
+        "examples": [
+          "age = 25",
+          "count = 0"
+        ]
+      },
+      {
+        "name": "String",
+        "description": "String variables store sequences of characters enclosed in single or double quotes.",
+        "examples": [
+          "name = 'Alice'",
+          "message = \"Hello, world!\""
+        ]
+      },
+      {
+        "name": "Tuple",
+        "description": "Tuple variables store ordered collections of items, which can be of different types.",
+        "examples": [
+          "coordinates = (10, 20)",
+          "person = ('Alice', 25)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Functions",
+    "description": "Functions are blocks of code that perform specific tasks. They are defined using the 'def' keyword.",
+    "examples": [
+      "def greet(name):",
+      "    print('Hello, ' + name)",
+      "greet('Bob')"
+    ]
+  },
+  {
+    "name": "loops",
+    "description": "Loops allow you to repeat a block of code. Python supports 'for' and 'while' loops.",
+    "examples": [
+      "for i in range(5):\n    print(i)",
+      "while x < 10:\n    print(x)\n    x += 1"
+    ],
+    "subconcepts":[
+      {
+        "name":"for loop",
+        "alias":["for"],
+        "description":"For loop is a funny concept",
+        "examples":[
+          "for i in range(5):\n    print(i)",
+          "while x < 10:\n    print(x)\n    x += 1"
+        ]
+      },
+      {
+        "name":"while loop",
+        "alias":["while"],
+        "description":"while loop",
+        "examples":[
+          "while x < 10:\\n    print(x)\\n    x += 1"
+        ]
+      },
+      {
+        "name":"do while",
+        "alias":["do while loop"],
+        "description":"do while is a extention of while loop"
+      }
+    ]
+  }
+]
